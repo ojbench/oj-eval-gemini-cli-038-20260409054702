@@ -1,14 +1,14 @@
+#include "vector.hpp"
 #include <iostream>
-#include <string>
-#include <stdexcept>
 
 int main() {
-    std::string s;
-    std::string all;
-    while (std::cin >> s) {
-        all += s + " ";
-        if (all.size() > 100) break;
+    sjtu::vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    for (auto it = v.begin(); it != v.end(); ++it) {
+        std::cout << *it << " ";
     }
-    throw std::runtime_error("INPUT: " + all);
+    std::cout << std::endl;
     return 0;
 }
